@@ -1,25 +1,20 @@
 import React from 'react';
+import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
 import logo from './logo.svg';
-import './App.css';
+
+import { UsersList } from './pages/UsersList'
+import { TodoList } from './pages/TodoList'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="users" element={<UsersList />}>
+          <Route path=":id" element={<TodoList />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/users/1" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

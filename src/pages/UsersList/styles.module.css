@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.usersList {
+  flex: 0 1 400px;
+  margin-right: 20px;
+}
+
+.user {
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 0 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.user:hover {
+  background: #eeeeee;
+}
+
+.user.active {
+  background: #8aee8a;
+}
