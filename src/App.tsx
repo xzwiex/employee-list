@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
-import logo from './logo.svg';
 
 import { UsersList } from './pages/UsersList'
 import { TodoList } from './pages/TodoList'
